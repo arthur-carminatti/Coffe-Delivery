@@ -6,7 +6,6 @@ export const HeaderContainer = styled.header`
     align-items: center;
     padding: 2rem 10rem;
     min-width: 800px;
-    max-width: 1920;
 
     background-color: ${props => props.theme["white-100"]};
 

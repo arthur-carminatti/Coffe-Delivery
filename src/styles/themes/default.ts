@@ -6,4 +6,10 @@ export const defaultTheme = {
 
     'yellow-100': '#F1E9C9',
     'yellow-700': '#C47F17',
+
+    'black-800': '#272221',
+    'black-600': '#403937',
+
+
+    'gray-500': '#574F4D',
 } as const
