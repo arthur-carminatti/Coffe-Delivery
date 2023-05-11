@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const IntroAlignContainer = styled.div`
     width: 100%;
     height: 34rem;
-    position: fixed;
+    display: flex;
+    position: relative;
 `
 
 export const IntroContainer = styled.section`

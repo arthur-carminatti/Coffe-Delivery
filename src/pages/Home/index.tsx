@@ -1,3 +1,4 @@
+import { CoffeList } from "../../components/CoffeList";
 import { Header } from "../../components/Header";
 import { Intro } from "../../components/Intro";
 import { HomeContainer } from "./styles";
@@ -7,6 +8,7 @@ export function Home() {
         <HomeContainer>
             <Header />
             <Intro />
+            <CoffeList />
         </HomeContainer>
     )
 }
