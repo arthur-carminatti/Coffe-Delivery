@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const IntroContainer = styled.section`
     width: 100%;
     height: 544px;
-    border: 1px solid red;
 
     img {
         position: absolute;
@@ -74,8 +73,6 @@ export const ItenOneIntroContainer = styled.div`
     left: 0px;
     top: 0px;
 
-    border: 1px solid red;
-
     p {
         color: ${props => props.theme["gray-500"]};
         font-size: 16px;
@@ -88,5 +85,35 @@ export const ItenOneIntroContainer = styled.div`
         padding: 8px;
         width: 32px;
         height: 32px;
+    }
+`
+
+export const ItenTwoIntroContainer = styled(ItenOneIntroContainer)`
+    width: 294px;
+    left: 271px;
+
+    svg {
+        background: ${props => props.theme["gray-500"]};
+    }
+`
+
+export const ItenThreeIntroContainer = styled(ItenOneIntroContainer)`
+    width: 231px;
+    height: 32px;
+    left: 0px;
+    top: 52px;
+
+    svg {
+        background: ${props => props.theme["yellow-500"]};
+    }
+`
+
+export const ItenFourIntroContainer = styled(ItenOneIntroContainer)`
+    width: 294px;
+    left: 265px;
+    top: 52px;
+
+    svg {
+        background: ${props => props.theme["purble-600"]};
     }
 `
