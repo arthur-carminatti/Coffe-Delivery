@@ -121,6 +121,6 @@ export const ItenFourIntroContainer = styled(ItenOneIntroContainer)`
     top: 3.25rem;
 
     svg {
-        background: ${props => props.theme["purble-600"]};
+        background: ${props => props.theme["purple-600"]};
     }
 `

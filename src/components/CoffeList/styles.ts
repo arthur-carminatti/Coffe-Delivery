@@ -7,6 +7,7 @@ export const CoffeListContainer = styled.main`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 1px solid red;
 `
 
 export const TitleCoffeList = styled.div`
@@ -37,7 +38,6 @@ export const TitleCoffeList = styled.div`
 export const ListCoffe = styled.table`
     width: 100%;
     height: 100%;
-    border: 1px solid red;
     display: flex;
     padding-left: 160px;
     padding-right: 160px;
@@ -54,9 +54,8 @@ export const CoffeCard = styled.tr`
     width: 256px;
     height: 310px;
     display: flex;
-    border: 1px solid red;
     border-radius: 6px;
-    margin-right: 32px;
+    margin-right: 60px;
     align-items: center;
     flex-direction: column;
     gap: 12px;
@@ -111,5 +110,88 @@ export const CoffeCard = styled.tr`
     p {
         text-align: center;
         color: ${props => props.theme["gray-300"]};
+    }
+`
+
+export const BuyListCoffe = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    margin-top: 20px;
+    gap: 29px;
+    height: 38px;
+
+    p {
+        color: ${props => props.theme["gray-500"]};
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 130%;
+    }
+
+    span {
+        padding: 5px;
+        font-weight: 800;
+        font-size: 22px;
+    }
+`
+
+export const ActionsBuyListCoffe = styled.div`
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    
+    width: 118px;
+    height: 38px;
+`
+
+export const CounterListCoffe = styled.div`
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    gap: 4px;
+    border-radius: 6px;
+
+    width: 72px;
+    height: 38px;
+
+    background: ${props => props.theme["gray-100"]};
+
+    button {
+        background: transparent;
+        border: 0;
+
+        svg {
+            color: ${props => props.theme["purple-600"]};
+        }
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 130%;
+        text-align: center;
+
+        color: ${props => props.theme["black-800"]};
+    }
+`
+
+export const CartListCoffe = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    border-radius: 6px;
+
+    width: 38px;
+    height: 38px;
+
+    background: ${props => props.theme["purple-700"]};
+
+    svg {
+        color: ${props => props.theme["white-200"]};
     }
 `

@@ -31,12 +31,12 @@ export const LocationContainter = styled.label`
     width: 100%;
     height: 100%;
 
-    background: ${props => props.theme["purble-100"]};
+    background: ${props => props.theme["purple-100"]};
 
     border-radius: 6px;
 
     p {
-        color: ${props => props.theme["purble-700"]};
+        color: ${props => props.theme["purple-700"]};
     }
 `
 
