@@ -7,7 +7,6 @@ export const CoffeListContainer = styled.main`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid red;
 `
 
 export const TitleCoffeList = styled.div`
