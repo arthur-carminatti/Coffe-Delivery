@@ -53,4 +53,9 @@ export const CartContainter = styled.button`
     background: ${props => props.theme["yellow-100"]};
     border-radius: 6px;
     border: 0;
+
+    svg {
+        display: flex;
+        align-items: center;
+    }
 `
