@@ -1,17 +1,26 @@
-import { CurrencyDollar, MapPin } from "phosphor-react";
+import { CurrencyDollar, MapPin, Minus, Plus, Trash } from "phosphor-react";
+import tradicionalCoffe from '../../assets/tradicionalCoffe.svg'
 import {
     BoxAdressContainer,
     BoxOneCheckoutContainer,
     BoxPayContainer,
+    BoxTwoCheckoutContainer,
     CheckoutContainer,
+    CoffeRemoveContainer,
+    CoffeSelectedContainer,
+    CoffeSelectedDetailsContainer,
+    CoffeSelectedInfoContainer,
     FrameOneContainer,
+    FrameTwoContainer,
     InputBoxAdressContainer,
     TitleAdressContainer,
     TitleBoxAdressContainer,
     TitleBoxPayContainer,
     TitleCheckoutContainer,
-    TitlePayContainer
+    TitlePayContainer,
+    TitleTwoCheckoutContainer
 } from "./styles";
+import { CounterListCoffe } from "../../components/CoffeList/styles";
 
 export function Checkout() {
     return (
@@ -47,6 +56,39 @@ export function Checkout() {
                     </BoxPayContainer>
                 </BoxOneCheckoutContainer>
             </FrameOneContainer>
+
+            <FrameTwoContainer>
+                <TitleTwoCheckoutContainer>
+                    Cafés selecionados
+                </TitleTwoCheckoutContainer>
+
+                <BoxTwoCheckoutContainer>
+                    <CoffeSelectedContainer>
+                        <CoffeSelectedInfoContainer>
+                            <img src={tradicionalCoffe} alt="" />
+
+                            <CoffeSelectedDetailsContainer>
+                                <CounterListCoffe>
+                                    <button>
+                                        <Minus size={14} weight="bold" />
+                                    </button>
+                                    <p>0</p>
+                                    <button>
+                                        <Plus size={14} weight="bold" />
+                                    </button>
+                                </CounterListCoffe>
+
+                                <CoffeRemoveContainer>
+                                    <button>
+                                        <p><Trash />Remover</p>
+                                    </button>
+                                </CoffeRemoveContainer>
+                            </CoffeSelectedDetailsContainer>
+
+                        </CoffeSelectedInfoContainer>
+                    </CoffeSelectedContainer>
+                </BoxTwoCheckoutContainer>
+            </FrameTwoContainer>
         </CheckoutContainer>
     )
 }
