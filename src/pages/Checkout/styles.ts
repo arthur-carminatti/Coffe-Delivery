@@ -2,6 +2,16 @@ import styled from "styled-components";
 
 export const CheckoutContainer = styled.main`
     width: 100%;
+    display: flex;
+`
+
+export const FrameOneContainer = styled.div`
+    border: 1px solid green;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 430px;
 `
 
 export const TitleCheckoutContainer = styled.div`
@@ -26,10 +36,8 @@ export const BoxOneCheckoutContainer = styled.div`
     flex-direction: column;
     padding: 0px;
     gap: 12px;
-    width: 640px;
-    height: 591px;
     margin-left: 160px;
-    margin-top: 15px;
+    min-width: 260px;
 
     border: 1px solid red;
 `
@@ -39,9 +47,6 @@ export const BoxAdressContainer = styled.div`
     padding: 40px;
     gap: 32px;
 
-    width: 640px;
-    height: 372px;
-
     border: 1px solid red;
 
     background: ${props => props.theme["white-200"]};
@@ -50,14 +55,14 @@ export const BoxAdressContainer = styled.div`
 
 export const TitleBoxAdressContainer = styled.div`
     display: flex;
+    flex-direction: row;
     padding: 0px;
-
-    width: 560px;
-    height: 44px;
-
-    border: 1px solid red;
+    border: 1px solid green;
 
     svg {
+        display: flex;
+        width: 20%;
+        border: 1px solid red;
         color: ${props => props.theme["yellow-700"]};
     }
 `
@@ -67,9 +72,7 @@ export const TitleAdressContainer = styled.div`
     flex-direction: column;
     padding-left: 8px;
     gap: 2px;
-
-    width: 530px;
-    height: 44px;
+    border: 1px solid red;
 
     span {
         color: ${props => props.theme["black-600"]};
@@ -80,8 +83,6 @@ export const TitleAdressContainer = styled.div`
         display: flex;
         font-weight: 400;
         align-items: center;
-
-        width: 530px;
     }
 
     p {
@@ -89,8 +90,7 @@ export const TitleAdressContainer = styled.div`
         font-size: 14px;
         color: ${props => props.theme["gray-500"]};
         align-items: center;
-
-        width: 530px;
+        display: flex;
     }
 `
 
@@ -102,6 +102,63 @@ export const InputBoxAdressContainer = styled.div`
 
     border: 1px solid red;
 
-    width: 560px;
     height: 216px;
+`
+
+export const BoxPayContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 32px;
+
+    background: ${props => props.theme["white-200"]};
+    border-radius: 6px;
+
+    border: 1px solid red;
+`
+
+export const TitleBoxPayContainer = styled.div`
+    display: flex;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    svg {
+        color: ${props => props.theme["purple-600"]};
+    }
+`
+
+export const TitlePayContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 2px;
+
+    strong {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+
+        display: flex;
+        align-items: center;
+
+        color: ${props => props.theme["black-600"]};
+    }
+
+    p {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+
+        display: flex;
+        align-items: center;
+
+        color: ${props => props.theme["gray-500"]};
+    }
 `
