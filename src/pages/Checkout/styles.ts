@@ -158,7 +158,6 @@ export const FrameTwoContainer = styled.div`
     width: 40%;
     display: flex;
     flex-direction: column;
-    position: relative;
     gap: 24px;
     min-width: 430px;
     margin-right: 160px;
@@ -183,7 +182,6 @@ export const TitleTwoCheckoutContainer = styled.div`
 export const BoxTwoCheckoutContainer = styled.div`
     border: 1px solid red;
     width: 100%;
-    height: 100%;
     
     padding: 40px;
     background: ${props => props.theme["white-200"]};
@@ -194,12 +192,11 @@ export const CoffeSelectedContainer = styled.div`
     border: 1px solid green;
 
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     padding: 8px 4px;
-    gap: 59px;
-
-    width: 368px;
-    height: 80px;
+    border-radius: 6px;
+    gap: 20px;
 
     background: ${props => props.theme["white-200"]};
 `
@@ -209,30 +206,37 @@ export const CoffeSelectedInfoContainer = styled.div`
     align-items: center;
     padding: 0px;
     gap: 20px;
-
-    border: 1px solid green;
-
-    width: 255px;
-    height: 64px;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #E6E5E5;
+    padding-bottom: 20px;
 
     img {
         width: 64px;
         height: 64px;
     }
+
+    span {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 130%;
+
+        display: flex;
+        align-items: center;
+        text-align: right;
+
+        color: #574F4D;
+    }
 `
 
-export const CoffeSelectedDetailsContainer = styled.div`
-    border: 1px solid red;
+export const CoffeSelectedActionsContainer = styled.div`
     display: flex;
     padding: 0px;
     gap: 8px;
 
     p {
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-
         display: flex;
         align-items: center;
 
@@ -244,21 +248,26 @@ export const CoffeRemoveContainer = styled.div`
     display: flex;
     gap: 20px;
     align-items: center;
+    justify-content: center;
     padding: 8px;
     border-radius: 6px;
+    font-size: 12px;
+    text-transform: uppercase;
 
-    width: 100px;
-    height: 38px;
+    border: 0;
 
     background: ${props => props.theme["gray-100"]};
 
-    button {
-        background: transparent;
-        border: 0;
-
-        svg {
+    svg {
             color: ${props => props.theme["purple-600"]};
             margin-right: 5px;
         }
-    }
+`
+
+export const CoffeSelectedDetailsContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
 `
