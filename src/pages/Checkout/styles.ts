@@ -39,6 +39,7 @@ export const BoxOneCheckoutContainer = styled.div`
     gap: 12px;
     min-width: 260px;
     border: 1px solid red;
+    border-radius: 6px 44px;
 `
 export const BoxAdressContainer = styled.div`
     display: flex;
@@ -180,17 +181,19 @@ export const TitleTwoCheckoutContainer = styled.div`
 `
 
 export const BoxTwoCheckoutContainer = styled.div`
-    border: 1px solid red;
+    border-radius: 6px 44px;
     width: 100%;
+    height: 100%;
     
     padding: 40px;
     background: ${props => props.theme["white-200"]};
     display: flex;
+    flex-direction: column;
+
+    gap: 48px;
 `
 
 export const CoffeSelectedContainer = styled.div`
-    border: 1px solid green;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -270,4 +273,92 @@ export const CoffeSelectedDetailsContainer = styled.div`
     align-items: flex-start;
     padding: 0px;
     gap: 8px;
+`
+
+export const CoffeSummaryContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+
+    width: 368px;
+    height: 92px;
+`
+
+export const CoffeTotalItensContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+
+    width: 368px;
+    height: 21px;
+
+    P {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        color: #574F4D;
+    }
+
+    span {
+        font-weight: 400;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        color: #574F4D;
+    }
+`
+
+export const CoffeDeliveryContainer = styled(CoffeTotalItensContainer)`
+`
+
+export const CoffeTotalContainer = styled(CoffeTotalItensContainer)`
+    p {
+        font-weight: 700;
+        font-size: 20px;
+
+        display: flex;
+        align-items: center;
+
+        color: #403937;
+    }
+
+    span {
+        font-weight: 700;
+        font-size: 20px;
+
+        display: flex;
+        align-items: center;
+
+        color: #403937;
+    }
+`
+
+export const CoffeConfirmButtonContainer = styled.button`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 8px;
+    gap: 4px;
+    border: 0;
+
+    width: 368px;
+    height: 46px;
+
+    background: #DBAC2C;
+    border-radius: 6px;
+
+    p {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 160%;
+
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+    }
 `

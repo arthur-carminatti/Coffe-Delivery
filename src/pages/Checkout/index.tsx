@@ -6,11 +6,16 @@ import {
     BoxPayContainer,
     BoxTwoCheckoutContainer,
     CheckoutContainer,
+    CoffeConfirmButtonContainer,
+    CoffeDeliveryContainer,
     CoffeRemoveContainer,
     CoffeSelectedActionsContainer,
     CoffeSelectedContainer,
     CoffeSelectedDetailsContainer,
     CoffeSelectedInfoContainer,
+    CoffeSummaryContainer,
+    CoffeTotalContainer,
+    CoffeTotalItensContainer,
     FrameOneContainer,
     FrameTwoContainer,
     InputBoxAdressContainer,
@@ -114,6 +119,27 @@ export function Checkout() {
                         </CoffeSelectedInfoContainer>
 
                     </CoffeSelectedContainer>
+
+                    <CoffeSummaryContainer>
+                        <CoffeTotalItensContainer>
+                            <p>Total de itens</p>
+                            <span>R$ 29,70</span>
+                        </CoffeTotalItensContainer>
+
+                        <CoffeDeliveryContainer>
+                            <p>Entrega</p>
+                            <span>R$ 3,50</span>
+                        </CoffeDeliveryContainer>
+
+                        <CoffeTotalContainer>
+                            <p>Entrega</p>
+                            <span>R$ 33,20</span>
+                        </CoffeTotalContainer>
+                    </CoffeSummaryContainer>
+
+                    <CoffeConfirmButtonContainer>
+                        <p>CONFIRMAR PEDIDO</p>
+                    </CoffeConfirmButtonContainer>
                 </BoxTwoCheckoutContainer>
             </FrameTwoContainer>
         </CheckoutContainer>
