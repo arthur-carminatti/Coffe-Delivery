@@ -11,8 +11,6 @@ export const FrameTwoContainer = styled.div`
 `
 
 export const TitleTwoCheckoutContainer = styled.div`
-        width: 156px;
-        height: 23px;
         display: flex;
 
         font-family: 'Baloo 2';
@@ -28,8 +26,6 @@ export const TitleTwoCheckoutContainer = styled.div`
 
 export const BoxTwoCheckoutContainer = styled.div`
     border-radius: 6px 44px;
-    width: 100%;
-    height: 100%;
     
     padding: 40px;
     background: ${props => props.theme["white-200"]};
@@ -42,7 +38,6 @@ export const BoxTwoCheckoutContainer = styled.div`
 export const CoffeSelectedContainer = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 8px 4px;
     border-radius: 6px;
     gap: 20px;
@@ -73,10 +68,11 @@ export const CoffeSelectedInfoContainer = styled.div`
         line-height: 130%;
 
         display: flex;
+        justify-content: end;
         align-items: center;
-        text-align: right;
 
         color: #574F4D;
+        width: 150px;
     }
 `
 
@@ -116,9 +112,10 @@ export const CoffeRemoveContainer = styled.div`
 export const CoffeSelectedDetailsContainer = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     padding: 0px;
     gap: 8px;
+    margin-left: 15px;
+    width: 100%;
 `
 
 export const CoffeSummaryContainer = styled.div`
@@ -128,9 +125,6 @@ export const CoffeSummaryContainer = styled.div`
     align-items: flex-start;
     padding: 0px;
     gap: 12px;
-
-    width: 368px;
-    height: 92px;
 `
 
 export const CoffeTotalItensContainer = styled.div`
@@ -140,8 +134,7 @@ export const CoffeTotalItensContainer = styled.div`
     padding: 0px;
     gap: 8px;
 
-    width: 368px;
-    height: 21px;
+    width: 100%;
 
     P {
         font-size: 14px;
@@ -191,9 +184,6 @@ export const CoffeConfirmButtonContainer = styled.button`
     padding: 12px 8px;
     gap: 4px;
     border: 0;
-
-    width: 368px;
-    height: 46px;
 
     background: #DBAC2C;
     border-radius: 6px;

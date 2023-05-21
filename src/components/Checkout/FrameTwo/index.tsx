@@ -71,7 +71,7 @@ export function FrameTwo() {
                                 </CoffeRemoveContainer>
                             </CoffeSelectedActionsContainer>
                         </CoffeSelectedDetailsContainer>
-                        <span>R$ 9,90</span>
+                        <span>R$ 119,90</span>
                     </CoffeSelectedInfoContainer>
 
                 </CoffeSelectedContainer>
