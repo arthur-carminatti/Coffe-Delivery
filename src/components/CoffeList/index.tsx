@@ -17,7 +17,7 @@ import { api } from "../../lib/axios";
 import { useEffect } from 'react'
 
 interface CoffesProps {
-    id: number,
+    id: string,
     name: string,
     subName: string,
     description: string,
@@ -25,28 +25,31 @@ interface CoffesProps {
 }
 
 export function CoffeList() {
-    const [coffeQuantity, setCoffeQuantity] = useState(0)
+    const [coffeQuantities, setCoffeQuantities] = useState<{ [id: string]: number }>({})
     const [coffes, setCoffes] = useState<CoffesProps[]>([])
 
-    function addCoffeQuantity() {
-        if (coffeQuantity <= 98) {
-            const addCoffe = coffeQuantity + 1
-            setCoffeQuantity(addCoffe)
+    function addCoffeQuantity(coffeId: string) {
+        const currentQuantity = coffeQuantities[coffeId] || 0
+        const newQuantity = currentQuantity + 1
+
+        if (newQuantity <= 99) {
+            const newQuantities = { ...coffeQuantities, [coffeId]: newQuantity }
+            setCoffeQuantities(newQuantities)
         }
-        return
     }
 
-    function removeCoffeQuantity() {
-        if (coffeQuantity >= 1) {
-            const removeCoffe = coffeQuantity - 1
-            setCoffeQuantity(removeCoffe)
+    function removeCoffeQuantity(coffeId: string) {
+        const currentQuantity = coffeQuantities[coffeId] || 0
+        const newQuantity = currentQuantity - 1
+
+        if (newQuantity >= 0) {
+            const newQuantities = { ...coffeQuantities, [coffeId]: newQuantity }
+            setCoffeQuantities(newQuantities)
         }
-        return
     }
 
     async function fetchCoffes() {
         const response = await api.get('Coffes')
-
         setCoffes(response.data)
     }
 
@@ -63,6 +66,8 @@ export function CoffeList() {
             <ListCoffe>
                 <tbody>
                     {coffes.map(coffe => {
+                        const quantity = coffeQuantities[coffe.id] || 0
+
                         return (
                             <td key={coffe.id}>
                                 <CoffeCard>
@@ -76,11 +81,11 @@ export function CoffeList() {
 
                                         <ActionsBuyListCoffe>
                                             <CounterListCoffe>
-                                                <button onClick={removeCoffeQuantity}>
+                                                <button onClick={() => removeCoffeQuantity(coffe.id)}>
                                                     <Minus size={14} weight="bold" />
                                                 </button>
-                                                <p>{coffeQuantity}</p>
-                                                <button onClick={addCoffeQuantity}>
+                                                <p>{quantity}</p>
+                                                <button onClick={() => addCoffeQuantity(coffe.id)}>
                                                     <Plus size={14} weight="bold" />
                                                 </button>
                                             </CounterListCoffe>
@@ -89,7 +94,6 @@ export function CoffeList() {
                                                 <ShoppingCartSimple size={22} weight="fill" />
                                             </CartListCoffe>
                                         </ActionsBuyListCoffe>
-
                                     </BuyListCoffe>
                                 </CoffeCard>
                             </td>
