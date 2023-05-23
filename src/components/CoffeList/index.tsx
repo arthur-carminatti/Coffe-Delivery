@@ -12,8 +12,27 @@ import {
 
 import tradicionalCoffe from '../../assets/tradicionalCoffe.svg'
 import { Minus, Plus, ShoppingCartSimple } from "phosphor-react";
+import { useState } from "react";
 
 export function CoffeList() {
+    const [coffeQuantity, setCoffeQuantity] = useState(0)
+
+    function addCoffeQuantity() {
+        if (coffeQuantity <= 98) {
+            const addCoffe = coffeQuantity + 1
+            setCoffeQuantity(addCoffe)
+        }
+        return
+    }
+
+    function removeCoffeQuantity() {
+        if (coffeQuantity >= 1) {
+            const removeCoffe = coffeQuantity - 1
+            setCoffeQuantity(removeCoffe)
+        }
+        return
+    }
+
     return (
         <CoffeListContainer>
             <TitleCoffeList>
@@ -34,11 +53,11 @@ export function CoffeList() {
 
                                 <ActionsBuyListCoffe>
                                     <CounterListCoffe>
-                                        <button>
+                                        <button onClick={removeCoffeQuantity}>
                                             <Minus size={14} weight="bold" />
                                         </button>
-                                        <p>0</p>
-                                        <button>
+                                        <p>{coffeQuantity}</p>
+                                        <button onClick={addCoffeQuantity}>
                                             <Plus size={14} weight="bold" />
                                         </button>
                                     </CounterListCoffe>
