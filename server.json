@@ -1,0 +1,18 @@
+{
+    "Coffes": [
+        {
+            "id": 1,
+            "name": "Tradicional",
+            "subName": "Expresso Tradicional",
+            "description": "O tradicional café feito com água quente e grãos moídos",
+            "price": "9,90"
+        },
+        {
+            "id": 2,
+            "name": "Expresso",
+            "subName": "Expresso",
+            "description": "O tradicional café feito com água quente e grãos moídos",
+            "price": "19,90"
+        }
+    ]
+}
