@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 export const FrameTwoContainer = styled.div`
-    border: 1px solid red;
     width: 40%;
     display: flex;
     flex-direction: column;

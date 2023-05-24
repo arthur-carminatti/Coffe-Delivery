@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const FrameOneContainer = styled.div`
-    border: 1px solid green;
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -33,7 +32,6 @@ export const BoxOneCheckoutContainer = styled.div`
     padding: 0px;
     gap: 12px;
     min-width: 260px;
-    border: 1px solid red;
     border-radius: 6px 44px;
 `
 export const BoxAdressContainer = styled.div`
