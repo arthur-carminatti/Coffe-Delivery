@@ -59,3 +59,29 @@ export const CartContainter = styled.button`
         align-items: center;
     }
 `
+
+export const CartConterContainter = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 154px;
+    top: 25px;
+
+    background: #C47F17;
+    border-radius: 1000px;
+
+    p {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+
+        text-align: center;
+        color: ${props => props.theme["white-100"]};
+    }
+`
