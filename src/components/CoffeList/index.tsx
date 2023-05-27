@@ -16,6 +16,9 @@ import { useState } from "react";
 import { api } from "../../lib/axios";
 import { useEffect } from 'react'
 
+import { useContext } from 'react'
+import { CoffeContext } from '../../contexts/CoffesQuantityContext'
+
 interface CoffesProps {
     id: string,
     name: string,
@@ -25,7 +28,7 @@ interface CoffesProps {
 }
 
 export function CoffeList() {
-    const [coffeQuantities, setCoffeQuantities] = useState<{ [id: string]: number }>({})
+    const { coffeQuantities, setCoffeQuantities } = useContext(CoffeContext)
     const [coffes, setCoffes] = useState<CoffesProps[]>([])
 
     function addCoffeQuantity(coffeId: string) {
